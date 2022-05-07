@@ -25,6 +25,7 @@ import Signup from "./pages/Signup";
 import axios from "axios";
 
 function App() {
+  const dispatch = useDispatch();
   const theme = {
     colors: {
       purple: "#5E17EB",
@@ -46,14 +47,12 @@ function App() {
     font: {},
   };
 
-
-  const getAccessToken = async (authorizationCode) => {
-    let resp = await axios.post("https://server.happydeving.com/users/login/kakao", {
-      authorizationCode: authorizationCode,
-    });
-    console.log(resp);
-  };
-
+  // const getAccessToken = async (authorizationCode) => {
+  //   let resp = await axios.post("https://server.happydeving.com/users/login/kakao", {
+  //     authorizationCode: authorizationCode,
+  //   });
+  //   console.log(resp);
+  // };
 
   useEffect(() => {
     const url = new URL(window.location.href);

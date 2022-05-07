@@ -66,7 +66,6 @@ module.exports = {
             createdAt,
             updatedAt,
           },
-          comment: study_comment,
         },
       });
     } catch (err) {
