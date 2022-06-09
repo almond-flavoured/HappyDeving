@@ -74,7 +74,8 @@ const Map = () => {
   //마커 생성용 데이터 가공
   const markerdata = studies
     ? studies.map((el) => {
-        var langname = el.language[0]?.name === "c++" ? "c" : el.language[0]?.name;
+        var langname =
+          el.language[0]?.name === "c++" ? "c" : el.language[0]?.name;
 
         console.log("langname", langname);
         return {
@@ -105,7 +106,7 @@ const Map = () => {
         studies.length === 0
           ? new kakao.maps.LatLng(37.570975, 126.977759)
           : new kakao.maps.LatLng(markerdata[0].lat, markerdata[0].lng), //지도의 중심좌표.
-      level: 5, //지도의 레벨(확대, 축소 정도)
+      level: 3, //지도의 레벨(확대, 축소 정도)
     };
 
     var map = new kakao.maps.Map(container.current, options);
